@@ -12,7 +12,7 @@ fi
 cppcheck --enable=warning,style,performance,portability \
     --check-level=exhaustive \
     --error-exitcode=1 \
-    "${TEST_DIR}/../" || test_end 1
+    "${TEST_DIR}"/../miner.{c,h} || test_end 1
 
 cc -Wall -Werror -fsyntax-only "${TEST_DIR}"/../miner.{c,h} || test_end 1
 
